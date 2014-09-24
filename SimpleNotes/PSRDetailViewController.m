@@ -7,7 +7,7 @@
 //
 
 #import "PSRDetailViewController.h"
-
+#import "PSRColorSelectorViewController.h"
 @interface PSRDetailViewController ()
 
 @end
@@ -49,8 +49,11 @@
 
 -(void) colorAction:(UIBarButtonItem*)sender{
     
-    
-    
+    UIStoryboard*currentStoryboard=[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];   //почему то теряется ссылка self.storyboard
+
+    PSRColorSelectorViewController*colorController=[currentStoryboard instantiateViewControllerWithIdentifier:@"PSRColorSelectorViewController"];
+    NSAssert(colorController,@"viewController не создан");
+    [self.navigationController pushViewController:colorController animated:YES];
     
 }
 

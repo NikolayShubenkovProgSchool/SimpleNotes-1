@@ -24,6 +24,7 @@
 		1F42EFE819097ED100B91F5B /* PSRMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F42EFE719097ED100B91F5B /* PSRMasterViewController.m */; };
 		1F42EFEB190989DC00B91F5B /* PSRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F42EFEA190989DC00B91F5B /* PSRDetailViewController.m */; };
 		1F876B9D19165105009DA0BB /* yoda.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F876B9C19165105009DA0BB /* yoda.png */; };
+		6942B70619D2EB31008ABB20 /* PSRColorSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6942B70519D2EB31008ABB20 /* PSRColorSelectorViewController.m */; };
 		695177E619D2DAB500160707 /* color_choose.png in Resources */ = {isa = PBXBuildFile; fileRef = 695177E519D2DAB500160707 /* color_choose.png */; };
 		6953048E19D223ED00D4E83E /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6953048D19D223ED00D4E83E /* Storyboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,8 @@
 		1F42EFE9190989DC00B91F5B /* PSRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSRDetailViewController.h; sourceTree = "<group>"; };
 		1F42EFEA190989DC00B91F5B /* PSRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSRDetailViewController.m; sourceTree = "<group>"; };
 		1F876B9C19165105009DA0BB /* yoda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yoda.png; sourceTree = "<group>"; };
+		6942B70419D2EB31008ABB20 /* PSRColorSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PSRColorSelectorViewController.h; path = ../PSRColorSelectorViewController.h; sourceTree = "<group>"; };
+		6942B70519D2EB31008ABB20 /* PSRColorSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PSRColorSelectorViewController.m; path = ../PSRColorSelectorViewController.m; sourceTree = "<group>"; };
 		695177E519D2DAB500160707 /* color_choose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color_choose.png; sourceTree = "<group>"; };
 		6953048D19D223ED00D4E83E /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +130,8 @@
 			children = (
 				1F42EFBF190978A700B91F5B /* PSRAppDelegate.h */,
 				1F42EFC0190978A700B91F5B /* PSRAppDelegate.m */,
+				6942B70419D2EB31008ABB20 /* PSRColorSelectorViewController.h */,
+				6942B70519D2EB31008ABB20 /* PSRColorSelectorViewController.m */,
 				6953048D19D223ED00D4E83E /* Storyboard.storyboard */,
 				1F42EFE619097ED100B91F5B /* PSRMasterViewController.h */,
 				1F42EFE719097ED100B91F5B /* PSRMasterViewController.m */,
@@ -283,6 +288,7 @@
 				1F42EFC1190978A700B91F5B /* PSRAppDelegate.m in Sources */,
 				1F42EFE4190978E200B91F5B /* PSRNoteManager.m in Sources */,
 				1F42EFE3190978E200B91F5B /* PSRNote.m in Sources */,
+				6942B70619D2EB31008ABB20 /* PSRColorSelectorViewController.m in Sources */,
 				1F42EFEB190989DC00B91F5B /* PSRDetailViewController.m in Sources */,
 				1F42EFE819097ED100B91F5B /* PSRMasterViewController.m in Sources */,
 				1F42EFBD190978A700B91F5B /* main.m in Sources */,

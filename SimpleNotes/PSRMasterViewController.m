@@ -9,6 +9,7 @@
 #import "PSRMasterViewController.h"
 #import "PSRNoteManager.h"
 #import "PSRDetailViewController.h"
+#import "PSRColorSelectorViewController.h"
 
 @interface PSRMasterViewController ()
 

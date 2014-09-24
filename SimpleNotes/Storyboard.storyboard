@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ALY-gu-xOl">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -8,7 +9,7 @@
         <scene sceneID="Ymo-SC-FiV">
             <objects>
                 <navigationController id="ALY-gu-xOl" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bxn-Na-qKA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -30,49 +31,59 @@
                         <viewControllerLayoutGuide type="bottom" id="ygg-G4-vBz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="UTO-wT-LZy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.79911679337727071" green="0.94503604227977256" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="EM6-M8-h80"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sVu-Ma-MaC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="434" y="362"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="gUp-Nz-daq">
+        <!--Color Selector View Controller-->
+        <scene sceneID="dzL-jS-lYj">
             <objects>
-                <viewController id="cfz-Ga-L61" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PSRColorSelectorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P9c-gF-kog" customClass="PSRColorSelectorViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JUd-8L-lp8"/>
-                        <viewControllerLayoutGuide type="bottom" id="tqY-mG-Z9t"/>
+                        <viewControllerLayoutGuide type="top" id="7CS-dg-pzi"/>
+                        <viewControllerLayoutGuide type="bottom" id="nlF-yw-SFH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="IBQ-Rx-8wY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="BNz-Qn-WVd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color_choose" translatesAutoresizingMaskIntoConstraints="NO" id="J94-px-3a4">
-                                <rect key="frame" x="76" y="173" width="41" height="37"/>
-                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dEY-Pr-tHT">
+                                <rect key="frame" x="34" y="306" width="252" height="31"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZzL-Co-U2D">
+                                <rect key="frame" x="34" y="367" width="252" height="31"/>
+                                <color key="tintColor" red="0.23757526709999999" green="1" blue="0.14494594229999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EIe-67-Xqq">
+                                <rect key="frame" x="34" y="429" width="252" height="31"/>
+                                <color key="tintColor" red="0.0001937171103" green="0.025558423359999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </slider>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gU-1T-LEc">
+                                <rect key="frame" x="16" y="109" width="288" height="171"/>
+                                <color key="backgroundColor" red="0.79911679339999997" green="0.94503604230000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Выберите цвет" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMj-Jb-eLF">
+                                <rect key="frame" x="100" y="20" width="121" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem image="color_choose" width="52" id="8kQ-3K-VFt">
-                            <inset key="imageInsets" minX="4" minY="22" maxX="0.0" maxY="1"/>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jwd-Q1-gzM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jWd-tt-iM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892" y="362"/>
+            <point key="canvasLocation" x="848" y="352"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="color_choose" width="383" height="383"/>
-    </resources>
 </document>
