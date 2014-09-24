@@ -55,23 +55,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dEY-Pr-tHT">
-                                <rect key="frame" x="34" y="306" width="252" height="31"/>
+                                <rect key="frame" x="34" y="190" width="252" height="31"/>
                                 <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeSliderAction:" destination="P9c-gF-kog" eventType="valueChanged" id="XBi-pv-lFH"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZzL-Co-U2D">
-                                <rect key="frame" x="34" y="367" width="252" height="31"/>
+                                <rect key="frame" x="34" y="234" width="252" height="31"/>
                                 <color key="tintColor" red="0.23757526709999999" green="1" blue="0.14494594229999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeSliderAction:" destination="P9c-gF-kog" eventType="valueChanged" id="8NP-dJ-cxa"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="EIe-67-Xqq">
-                                <rect key="frame" x="34" y="429" width="252" height="31"/>
+                                <rect key="frame" x="34" y="278" width="252" height="31"/>
                                 <color key="tintColor" red="0.0001937171103" green="0.025558423359999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeSliderAction:" destination="P9c-gF-kog" eventType="valueChanged" id="HGw-Dl-bGH"/>
+                                </connections>
                             </slider>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2gU-1T-LEc">
-                                <rect key="frame" x="16" y="109" width="288" height="171"/>
+                                <rect key="frame" x="16" y="93" width="288" height="89"/>
                                 <color key="backgroundColor" red="0.79911679339999997" green="0.94503604230000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Выберите цвет" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMj-Jb-eLF">
-                                <rect key="frame" x="100" y="20" width="121" height="21"/>
+                                <rect key="frame" x="100" y="64" width="121" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,6 +89,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="blueSlider" destination="EIe-67-Xqq" id="vqh-C9-Gha"/>
+                        <outlet property="colorTestView" destination="2gU-1T-LEc" id="uTm-ZG-geq"/>
+                        <outlet property="greenSlider" destination="ZzL-Co-U2D" id="SMl-eX-5cc"/>
+                        <outlet property="redSlider" destination="dEY-Pr-tHT" id="LTC-Ar-fK6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jWd-tt-iM9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

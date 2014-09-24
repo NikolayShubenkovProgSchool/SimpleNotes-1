@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+        self.navigationItem.title = @"Настройки";
     // Do any additional setup after loading the view.
 }
 
@@ -24,14 +25,29 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void) updateColor{
+    
+    
+    CGFloat r=self.redSlider.value;
+    CGFloat g=self.greenSlider.value;
+    CGFloat b=self.blueSlider.value;
+    
+    UIColor*color=[UIColor colorWithRed:r green:g blue:b alpha:1];
+    
+    self.colorTestView.backgroundColor=color;
+    
+    [self.delegate colorChangedWithColor:color];
 }
-*/
+
+
+
+#pragma mark - Actions
+
+- (IBAction)changeSliderAction:(UISlider *)sender {
+    
+    [self updateColor];
+    
+}
+
 
 @end

@@ -8,7 +8,7 @@
 
 #import "PSRDetailViewController.h"
 #import "PSRColorSelectorViewController.h"
-@interface PSRDetailViewController ()
+@interface PSRDetailViewController () <PSRColorSelectorViewControllerDelegate>
 
 @end
 
@@ -22,6 +22,7 @@
     
     if (self.note) {
         self.textView.text = self.note.text;
+        self.textView.textColor=self.note.color;
     }
     
     self.navigationItem.title = self.note.text;
@@ -53,6 +54,8 @@
 
     PSRColorSelectorViewController*colorController=[currentStoryboard instantiateViewControllerWithIdentifier:@"PSRColorSelectorViewController"];
     NSAssert(colorController,@"viewController не создан");
+    
+    colorController.delegate=self;
     [self.navigationController pushViewController:colorController animated:YES];
     
 }
@@ -63,6 +66,16 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     self.note.text = self.textView.text;
+    self.note.color=self.textView.textColor;
+
+}
+
+
+#pragma mark - PSRColorSelectorViewControllerDelegate
+
+-(void)colorChangedWithColor:(UIColor*) color{
+    
+    self.textView.textColor=color;
 }
 
 @end
