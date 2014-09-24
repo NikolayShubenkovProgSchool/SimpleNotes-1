@@ -33,7 +33,7 @@
     self.tableView.delegate = self;
     
     [self.view addSubview:self.tableView];
-    self.navigationItem.title = @"Notes";
+    self.navigationItem.title = @"Заметки";
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNote)];
     self.navigationItem.rightBarButtonItem = addButton;
