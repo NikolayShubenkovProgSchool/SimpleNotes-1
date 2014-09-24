@@ -52,8 +52,19 @@
                     <view key="view" contentMode="scaleToFill" id="IBQ-Rx-8wY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color_choose" translatesAutoresizingMaskIntoConstraints="NO" id="J94-px-3a4">
+                                <rect key="frame" x="76" y="173" width="41" height="37"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem image="color_choose" width="52" id="8kQ-3K-VFt">
+                            <inset key="imageInsets" minX="4" minY="22" maxX="0.0" maxY="1"/>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwd-Q1-gzM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -61,4 +72,7 @@
             <point key="canvasLocation" x="892" y="362"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="color_choose" width="383" height="383"/>
+    </resources>
 </document>

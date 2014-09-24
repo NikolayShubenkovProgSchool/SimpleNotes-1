@@ -28,15 +28,26 @@
     
     UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
     
-    UIImage*colorImage=[UIImage imageNamed:@"color_choose"];
-    UIBarButtonItem*colorButton=[[UIBarButtonItem alloc]initWithImage:colorImage style:UIBarButtonItemStylePlain target:self action:@selector(colorAction)];
+    
+
+
+    
+   // UIImage*shriftImage=[UIImage imageNamed:@"color_choose.jpeg"];
+    UIImage*colorImage=[UIImage imageNamed:@"color_choose.png"];
+
+    NSAssert(colorImage,@"картинка не создана");
+    
+    UIBarButtonItem*colorButton=[[UIBarButtonItem alloc]initWithImage:colorImage
+                                                                style:UIBarButtonItemStylePlain
+                                                               target:self
+                                                               action:@selector(colorAction:)];
     
     
-    self.navigationItem.rightBarButtonItem = cancelButton;
+    self.navigationItem.rightBarButtonItem = colorButton;
 }
 
 
--(void) colorAction{
+-(void) colorAction:(UIBarButtonItem*)sender{
     
     
     
