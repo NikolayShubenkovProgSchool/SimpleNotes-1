@@ -67,6 +67,8 @@
     
     PSRNote *note = [[[PSRNoteManager sharedManager] notes] objectAtIndex:indexPath.row];
     cell.textLabel.text = note.text;
+    cell.textLabel.textColor=note.color;
+    cell.textLabel.font=note.font;
     
     return cell;
 }

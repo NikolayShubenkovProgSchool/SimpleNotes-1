@@ -8,7 +8,8 @@
 
 #import "PSRDetailViewController.h"
 #import "PSRColorSelectorViewController.h"
-@interface PSRDetailViewController () <PSRColorSelectorViewControllerDelegate>
+#import "PSRFontsViewController.h"
+@interface PSRDetailViewController () <PSRColorSelectorViewControllerDelegate,PSRFontsViewControllerDelegate>
 
 @end
 
@@ -23,30 +24,45 @@
     if (self.note) {
         self.textView.text = self.note.text;
         self.textView.textColor=self.note.color;
+        self.textView.font=self.note.font;
     }
     
     self.navigationItem.title = self.note.text;
     
-    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
-    
-    
-
 
     
-   // UIImage*shriftImage=[UIImage imageNamed:@"color_choose.jpeg"];
+    
     UIImage*colorImage=[UIImage imageNamed:@"color_choose.png"];
-
-    NSAssert(colorImage,@"картинка не создана");
     
+    NSAssert(colorImage,@"картинка не создана");
+    /*
     UIBarButtonItem*colorButton=[[UIBarButtonItem alloc]initWithImage:colorImage
                                                                 style:UIBarButtonItemStylePlain
                                                                target:self
                                                                action:@selector(colorAction:)];
+     */
     
+
+    UIBarButtonItem *colorButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose
+                                                                                 target:self
+                                                                                 action:@selector(colorAction:)];
+    UIBarButtonItem *fontsButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemOrganize
+                                                                                 target:self
+                                                                                 action:@selector(fontsAction)];
     
-    self.navigationItem.rightBarButtonItem = colorButton;
+    self.navigationItem.rightBarButtonItems = @[fontsButton,colorButton];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    self.note.text = self.textView.text;
+    self.note.color=self.textView.textColor;
+    self.note.font=self.textView.font;
+    
+}
+
+
+#pragma mark - Actions
 
 -(void) colorAction:(UIBarButtonItem*)sender{
     
@@ -60,14 +76,23 @@
     
 }
 
-- (void)cancel {
+- (void)fontsAction {
     
+    UIStoryboard*currentStoryboard=[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];   //почему то теряется ссылка self.storyboard
+    
+    PSRColorSelectorViewController*fontController=[currentStoryboard instantiateViewControllerWithIdentifier:@"PSRFontsViewController"];
+    NSAssert(fontController,@"PSRFontsViewController не создан");
+    
+    fontController.delegate=self;
+    [self.navigationController pushViewController:fontController animated:YES];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    self.note.text = self.textView.text;
-    self.note.color=self.textView.textColor;
 
+#pragma mark - PSRFontsViewControllerDelegate
+
+-(void) changeFontWith:(UIFont*)font{
+
+    self.textView.font=font;
 }
 
 
