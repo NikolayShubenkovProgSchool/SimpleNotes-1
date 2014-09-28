@@ -68,7 +68,8 @@
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
     }
     
-    
+#warning не круто при каждом запросе ячеек сканировать все шрифты системы, лучше это сделать один раз в методе  viewDidLoad  
+#warning также отсортируйте, пожалуйста шрифты каким-нибудь образом, например по алфавиту.
     NSArray*fontsFamily=[UIFont familyNames];
     NSString*familyName=[fontsFamily objectAtIndex:indexPath.section];
     NSArray*fontsInFamily=[UIFont fontNamesForFamilyName:familyName];

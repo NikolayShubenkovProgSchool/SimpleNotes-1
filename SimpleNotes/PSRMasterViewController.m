@@ -74,7 +74,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+#warning а сделайте переход через performSegue withSender
     PSRDetailViewController *detailVC = [[PSRDetailViewController alloc] init];
     PSRNote *note = [[[PSRNoteManager sharedManager] notes] objectAtIndex:indexPath.row];
 //    detailVC.textView.text = note.text;

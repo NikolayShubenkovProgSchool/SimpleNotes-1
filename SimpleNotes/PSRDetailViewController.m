@@ -65,7 +65,8 @@
 #pragma mark - Actions
 
 -(void) colorAction:(UIBarButtonItem*)sender{
-    
+#warning тут можно сделать несколько иначе, это позволит отвязать контроллер от названия сторибоард файла, которое может поменятсья в любой момент
+    self.storyboard;
     UIStoryboard*currentStoryboard=[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];   //почему то теряется ссылка self.storyboard
 
     PSRColorSelectorViewController*colorController=[currentStoryboard instantiateViewControllerWithIdentifier:@"PSRColorSelectorViewController"];
@@ -79,7 +80,7 @@
 - (void)fontsAction {
     
     UIStoryboard*currentStoryboard=[UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];   //почему то теряется ссылка self.storyboard
-    
+#warning а сделайте через performSegue
     PSRColorSelectorViewController*fontController=[currentStoryboard instantiateViewControllerWithIdentifier:@"PSRFontsViewController"];
     NSAssert(fontController,@"PSRFontsViewController не создан");
     
